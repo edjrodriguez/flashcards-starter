@@ -19,9 +19,9 @@ describe('Deck', function() {
     
       it('should be able to hold a card', function() {
         const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-        const deck = new Deck(card1);
+        const deck = new Deck([card1]);
 
-        expect(deck.stackOfCards).to.equal(card1);
+        expect(deck.stackOfCards).to.deep.equal([card1]);
       })
 
       it('should be able to add multiple cards at once', function() {

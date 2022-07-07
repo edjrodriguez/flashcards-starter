@@ -7,14 +7,17 @@ class Round {
     }
 
     returnCurrentCard() {
-        return this.deck.stackOfCards[0];
+        return this.deck.stackOfCards[this.turnsTaken];
     }
     
-    takeTurn() {
+    takeTurn(guess) {
+        let turn = new Turn(guess, this.returnCurrentCard());
+        turn.evaluateGuess(); 
+        if(turn.evaluateGuess === false){
+            
+        }
         this.turnsTaken += 1; 
-        let turn = new Turn();
-        // turn.evaluateGuess();
-        return turn;
+        return turn.giveFeedback();
     }
 
 }

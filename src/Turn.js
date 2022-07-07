@@ -2,6 +2,7 @@ class Turn {
     constructor(guess, card) {
         this.guess = guess;
         this.heldCard = card;
+    
     }
 
     returnGuess() {
@@ -12,16 +13,13 @@ class Turn {
         return this.heldCard;
     }
     evaluateGuess() {
-      if(this.guess != this.heldCard.correctAnswer){
-        return false;
-      } else
-      return true; 
-    }
+        return this.guess === this.heldCard.correctAnswer;
+    } 
 
     giveFeedback() {
-        if(this.guess != this.heldCard.correctAnswer){
+        if (this.guess !== this.heldCard.correctAnswer) {
             return 'incorrect!';
-          } else
+        } else
           return 'correct!'; 
     }
 }
