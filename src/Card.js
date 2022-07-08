@@ -5,6 +5,6 @@ class Card {
         this.answers = arrayOfPossibleAnswers;
         this.correctAnswer = answer;
     }
-}
+};
 
 module.exports = Card;
