@@ -29,7 +29,7 @@ describe('Deck', function() {
        
 
         let cards = data.prototypeData;
-
+  
         const deck = new Deck(cards)
 
         expect(deck.stackOfCards).to.deep.equal(cards);

@@ -21,7 +21,7 @@ class Round {
     }
 
     calculatePercentCorrect() {
-        return parseInt(((this.deck.countCards() - this.incorrectGuesses.length) / this.deck.countCards() * 100).toFixed(0));
+        return parseInt(((this.turnsTaken - this.incorrectGuesses.length)/this.turnsTaken * 100).toFixed(0));
     }
 
 

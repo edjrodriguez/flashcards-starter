@@ -4,7 +4,7 @@ const expect = chai.expect;
 const Round = require('../src/Round');
 const Deck = require('../src/Deck');
 const Card = require('../src/Card');
-const Turn = require('../src/Turn');
+// const Turn = require('../src/Turn');
 
 
 describe('Round', function() {
@@ -138,16 +138,17 @@ describe('Round', function() {
         let turn1 = round.takeTurn('gallbladder');
         expect(turn1).to.equal('incorrect!')
         expect(round.incorrectGuesses).to.deep.equal([1])
+        expect(round.calculatePercentCorrect()).to.equal(0);
 
        let turn2 =  round.takeTurn('gallbladder');
         expect(turn2).to.equal('correct!')
         expect(round.incorrectGuesses).to.deep.equal([1])
+        expect(round.calculatePercentCorrect()).to.equal(50);
 
         let turn3 = round.takeTurn('gallbladder');
         expect(turn3).to.equal('incorrect!') 
         expect(round.incorrectGuesses).to.deep.equal([1, 12])
 
-        // round.calculatePercentCorrect()
 
         expect(round.calculatePercentCorrect()).to.equal(33)
     })
