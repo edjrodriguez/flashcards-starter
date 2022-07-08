@@ -4,9 +4,9 @@ const expect = chai.expect;
 const Game = require('../src/Game');
 const Round = require('../src/Round');
 
-describe('Game', function() {
+describe('Game', () => {
   
-    it('on game.start() it should start a new Round with 30 cards in its deck', function() {
+    it('on game.start() it should start a new Round with 30 cards in its deck', () => {
         let game = new Game();
         game.start()
         expect(game.currentRound).to.be.an.instanceOf(Round);
