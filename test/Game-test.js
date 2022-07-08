@@ -10,7 +10,6 @@ describe('Game', function() {
         let game = new Game();
         game.start()
         expect(game.currentRound).to.be.an.instanceOf(Round);
-        expect(game.currentRound.deck.stackOfCards[0].id).to.deep.equal(1);
         expect(game.currentRound.deck.stackOfCards[29].id).to.deep.equal(30);
     })
 })
